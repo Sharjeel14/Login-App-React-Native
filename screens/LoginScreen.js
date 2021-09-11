@@ -55,26 +55,12 @@ const LoginScreen = ({navigation}) => {
         onPress={() => googleLogin()}
       />
       <SocialButton
-        buttonTitle="Sign Up with Facebook"
-        btnType="facebook"
-        color="#4867aa"
-        backgroundColor="#e6eaf4"
-        onPress={() => fbLogin()}
-      />
-      <SocialButton
         buttonTitle="Sign In as Guest"
         btnType="facebook"
         color="#4867aa"
         backgroundColor="#e6eaf4"
         onPress={() => guest()}
       />
-      {/* <SocialButton
-        buttonTitle="Sign In As Guest User"
-        btnType="facebook"
-        color="#4867aa"
-        backgroundColor="#e6eaf4"
-        onPress={() => guest()}
-      /> */}
       <TouchableOpacity
         style={styles.forgotButton}
         onPress={() => navigation.navigate('Signup')}>
