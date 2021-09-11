@@ -16,7 +16,7 @@ const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
-  const {login, fbLogin, guest, googleLogin} = useContext(AuthContext);
+  const {login, guest, googleLogin} = useContext(AuthContext);
   return (
     <View style={styles.container}>
       <Image
