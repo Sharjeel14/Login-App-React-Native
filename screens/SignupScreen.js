@@ -9,7 +9,7 @@ const SignupScreen = ({navigation}) => {
   const [password, setPassword] =useState();
   const [confirmPassword, setConfirmPassword] =useState();
 
-  const {register} = useContext(AuthContext);
+  const {register, login, guest, googleLogin} = useContext(AuthContext);
     return (
       <View style={styles.container}>
         <Text style={styles.text }>Create An Account</Text>
@@ -48,12 +48,20 @@ const SignupScreen = ({navigation}) => {
           <Text style ={styles.color_textPrivate}> and </Text>
           <Text style ={[styles.color_textPrivate,{color: '#e88832'}]}>Privacy Policy</Text>
         </View>
- 	<SocialButton 
-          buttonTitle = "Sign In with Facebook"
-          btnType="facebook"
-          color="#4867aa"
-          backgroundColor= '#e6eaf4'
-        />
+        <SocialButton
+        buttonTitle="Sign Up with Google"
+        btnType="google"
+        color="#de4d41"
+        backgroundColor="#f5e7ea"
+        onPress={() => googleLogin()}
+      />
+      <SocialButton
+        buttonTitle="Sign In as Guest"
+        btnType="facebook"
+        color="#4867aa"
+        backgroundColor="#e6eaf4"
+        onPress={() => guest()}
+      />
       </View>
     );
   };
